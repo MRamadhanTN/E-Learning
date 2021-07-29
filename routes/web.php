@@ -5,6 +5,7 @@ use App\Http\Controllers\LandingpageController;
 use App\Http\Controllers\LoginStudentController;
 use App\Http\Controllers\LoginTeacherController;
 use App\Http\Controllers\MainClassController;
+use App\Http\Controllers\MainProfileController;
 use App\Http\Controllers\MainSubjectController;
 use App\Http\Controllers\RegisterStudentController;
 use App\Http\Controllers\RegisterTeacherController;
@@ -28,6 +29,8 @@ Route::get('/home/classMain', [MainClassController::class, 'index'])->name('main
 
 Route::get('/home/subject', [SubjectController::class, 'index'])->name('subject');
 Route::get('/home/subjectMain', [MainSubjectController::class, 'index'])->name('MainSubject');
+
+Route::get('/home/profile', [MainProfileController::class, 'index'])->name('profile');
 
 Route::get('/loginStudent', [LoginStudentController::class, 'index'])->name('student');
 Route::get('/registerStudent', [RegisterStudentController::class, 'index'])->name('reStudent');
