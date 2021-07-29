@@ -7,6 +7,8 @@ use App\Http\Controllers\LoginTeacherController;
 use App\Http\Controllers\MainClassController;
 use App\Http\Controllers\MainProfileController;
 use App\Http\Controllers\MainSubjectController;
+use App\Http\Controllers\MainTheoryController;
+use App\Http\Controllers\ProfileStudentController;
 use App\Http\Controllers\RegisterStudentController;
 use App\Http\Controllers\RegisterTeacherController;
 use App\Http\Controllers\SubjectController;
@@ -24,19 +26,28 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [LandingpageController::class, 'index'])->name('landingpage');
 
-Route::get('/home/class', [ClassController::class, 'index'])->name('class');
-Route::get('/home/classMain', [MainClassController::class, 'index'])->name('mainClass');
+Route::get('/Class', [ClassController::class, 'index'])->name('class');
+Route::get('/ClassMain', [MainClassController::class, 'index'])->name('mainClass');
 
-Route::get('/home/subject', [SubjectController::class, 'index'])->name('subject');
-Route::get('/home/subjectMain', [MainSubjectController::class, 'index'])->name('MainSubject');
+Route::get('/Subject', [SubjectController::class, 'index'])->name('subject');
+Route::get('/SubjectMain', [MainSubjectController::class, 'index'])->name('MainSubject');
 
-Route::get('/home/profile', [MainProfileController::class, 'index'])->name('profile');
+Route::get('/TheoryMain', [MainTheoryController::class, 'index'])->name('mainTheory');
 
-Route::get('/loginStudent', [LoginStudentController::class, 'index'])->name('student');
-Route::get('/registerStudent', [RegisterStudentController::class, 'index'])->name('reStudent');
+Route::get('/ProfileTeacher', [MainProfileController::class, 'index'])->name('profile');
 
-Route::get('/loginTeacher', [LoginTeacherController::class, 'index'])->name('Teacher');
-Route::get('/registerTeacher', [RegisterTeacherController::class, 'index'])->name('reTeacher');
+Route::get('/LoginStudent', [LoginStudentController::class, 'index'])->name('student');
+Route::get('/RegisterStudent', [RegisterStudentController::class, 'index'])->name('reStudent');
+
+Route::get('/MyProfile', [ProfileStudentController::class, 'index'])->name('profileStudent');
+
+Route::get('/EditProfileStudent', function () {
+    return view('pages.editProfileStudent');
+})->name('editProfileStudent');
+
+Route::get('/LoginTeacher', [LoginTeacherController::class, 'index'])->name('Teacher');
+Route::get('/RegisterTeacher', [RegisterTeacherController::class, 'index'])->name('reTeacher');
+
 
 Route::get('/private&policy', function () {
     return view('pages.private');

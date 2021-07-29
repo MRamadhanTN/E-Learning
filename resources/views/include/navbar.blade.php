@@ -1,9 +1,9 @@
-<nav class="grid grid-cols-3 items-center py-5 px-10 fixed z-10 w-screen transition-all duration-300" id="navbar">
+<nav class="flex justify-between lg:grid lg:grid-cols-3 items-center py-5 px-10 fixed z-10 w-screen transition-all duration-300" id="navbar">
     <a href="{{ route('landingpage') }}">
         <img src="{{ asset('image/logo.png') }}" alt="Logo" width="40" />
     </a>
     <div class="py-1 hidden md:block mx-auto" >
-        <div class="bg-white flex items-center rounded-full">
+        <div class="bg-white flex items-center rounded-full {{ (request()->is(['EditProfileStudent', 'MyProfile'])) ? 'hidden':'' }}">
             <input class="rounded-l-full w-full px-6 text-gray-700 leading-tight focus:outline-none" id="search" type="text" placeholder="Search">
             <div class="p-1">
                 <button id="btn" class="bg-blue-500 text-white rounded-full hover:bg-blue-400 focus:outline-none w-9 h-9 flex items-center justify-center">
@@ -26,6 +26,29 @@
         <a href="{{ route('subject') }}" class="block md:inline-block text-blue-900 text-lg transition delay-150 duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-blue-500 px-3 py-3">Subject</a>
         <a href="{{ route('student') }}" class="block md:inline-block text-blue-900 text-lg transition delay-150 duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-blue-500 px-3 py-3"><p>Sign In</p></a>
         <a href="{{ route('reStudent') }}" class="block md:inline-block text-blue-900 text-lg transition delay-150 duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-blue-500 px-3 py-3"><p class="md:border-b-2 border-gray-300 border-0">Sign Up</p></a>
+        @guest
+
+        @else
+            <div x-data="{ dropdownOpen: false }" class="relative px-3">
+                <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded-md focus:outline-none">
+                    <img class="rounded-full h-12 w-12" src="{{ asset('image/ui.png') }}" alt="image">
+                </button>
+
+                <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+                <div x-show="dropdownOpen" class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-xl z-20 text-center">
+                    <a href="{{ route('profileStudent') }}" class="{{ (request()->is('MyProfile')) ? 'hidden':'block' }} px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                    My Profile
+                    </a>
+                    <a href="{{ route('editProfileStudent') }}" class="{{ (request()->is('EditProfileStudent')) ? 'hidden':'block' }} px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                    Settings
+                    </a>
+                    <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                    Sign Out
+                    </a>
+                </div>
+            </div>
+        @endguest
         {{-- <button class="ml-5" id="dark"><img src="{{ asset('image/moon.svg') }}" alt="dark mode" width="20"></button> --}}
     </div>
 </nav>

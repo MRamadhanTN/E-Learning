@@ -12,7 +12,7 @@
                 PHP is a recursive acronym for "PHP: Hypertext Preprocessor", which is a programming language that is widely used to handle the creation and development of a website and can be used in conjunction with HTML.
             </div>
         </div>
-        <div class="grid grid-cols-4 text-blue-900 mx-auto mb-40 gap-y-12 gap-x-12">
+        <div class="grid grid-cols-4 text-blue-900 mx-auto gap-y-12 gap-x-12">
             <div class="col-span-1 border rounded-xl shadow-xl mx-auto w-72" data-aos="fade-up" data-aos-duration="700">
                 <img class="rounded-t-xl" src="{{ asset('image/d.jpeg') }}" alt="image">
                 <div class=" flex justify-center items-center flex-col text-center">
