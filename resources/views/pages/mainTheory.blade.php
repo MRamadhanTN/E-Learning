@@ -8,7 +8,7 @@
             <div class="text-4xl font-bold">Basic PHP</div>
             <div class="text-lg text-gray-400">By: Ramadhan Nurdias</div>
             <br>
-            <div class="text-xl w-9/12">
+            <div class="text-xl w-9/12" style="">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
