@@ -1,5 +1,11 @@
 <link rel="icon" href="https://smart.sch.id/wp-content/uploads/2019/11/Gambar-Kupu-Kupu.png">
+
+{{-- FontAwosome --}}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
+
+{{-- TailwinsCss --}}
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
 {{-- Slide --}}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 

@@ -5,14 +5,14 @@
 @section('content')
     {{-- Banner One --}}
     <div class="grid grid-cols-2 pt-40">
-        <div class="col-span-1 flex flex-col justify-center mx-auto w-96 text-blue-900" data-aos="fade-right" data-aos-duration="1000">
+        <div class="col-span-1 flex flex-col justify-center mx-auto w-96 text-blue-900" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100">
             <div class="text-4xl font-bold text-blue-900">Want to try being a teacher?</div>
             <div class="text-lg my-10">
                 "A true teacher is one who does what he says and teaches his students."
             </div>
             <a href="{{ route('reTeacher') }}" class="transition duration-500 transform hover:-translate-y-1 hover:scale-110 text-2xl text-blue-900 hover:text-blue-500 font-medium rounded-full text-center bg-yellow-300 py-3 w-52">Sign Up Free</a>
         </div>
-        <div class="col-span-1" data-aos="fade-left" data-aos-duration="1000">
+        <div class="col-span-1" data-aos="fade-left" data-aos-duration="500" data-aos-delay="200">
             <img src="https://buildwithangga.com/themes/front/images/illustration_hero_banner.svg" alt="Banner Image">
         </div>
     </div>
@@ -30,42 +30,58 @@
         </div>
 
         {{-- New Class --}}
-        <div class="text-blue-900 border-b-4 border-gray-400 w-48 pb-4" data-aos="fade-up" data-aos-duration="500">
+        <div class="text-blue-900 border-b-4 border-gray-400 w-48 pb-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
             <div class="text-4xl font-bold">New Class</div>
         </div>
-        <div class="grid grid-cols-3 text-blue-900 mb-40 mt-12 mx-auto">
-            <div class="col-span-1 border rounded-xl shadow-xl w-96 mx-auto" data-aos="fade-up" data-aos-duration="700">
-                <img class="rounded-t-xl" src="{{ asset('image/d.jpeg') }}" alt="image">
-                <div class="mx-14 mb-12 mt-10">
-                    <div class="text-xl text-gray-400">PHP</div>
-                    <div class="text-4xl font-bold my-3">Programming</div>
-                    <div class=" text-2xl font-medium">Mr. Ramadhan</div>
-                    <div class="my-14 ml-16 transform hover:-translate-y-1 hover:scale-110 transition-all delay-150 duration-300">
-                        <a href="{{ route('mainClass') }}" class="border rounded-full text-xl font-medium px-5 text-center bg-yellow-300 py-3 w-52 cursor-pointer hover:text-blue-500 transition duration-300">Open Class</a>
+        <div class="grid grid-cols-3 text-blue-900 mb-40 mt-12">
+            <div class="">
+                <div class="col-span-1 shadow-xl rounded-2xl w-10/12 mx-auto" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <div>
+                        <img class="rounded-t-xl w-full h-60" src="{{ asset('image/b.jpg') }}" alt="image">
+                    </div>
+                    <div class="mt-5 flex flex-col items-center h-52">
+                        <div>
+                            <div class="text-lg text-gray-400">PHP</div>
+                            <div class="text-4xl font-bold my-2">Programming</div>
+                            <div class=" text-xl font-medium">Mr. Ramadhan</div>
+                        </div>
+                        <div class="mt-8 transform hover:-translate-y-1 hover:scale-110 transition-all delay-150 duration-300">
+                            <a href="{{ route('mainClass') }}" class="rounded-full text-lg font-medium px-5 text-center bg-yellow-300 py-3 hover:text-blue-500 transition duration-300">Open Class</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-span-1 border rounded-xl shadow-xl w-96 mx-auto" data-aos="fade-up" data-aos-duration="800">
-                <img class="rounded-t-xl" src="{{ asset('image/d.jpeg') }}" alt="image">
-                <div class="mx-14 mb-12 mt-10">
-                    <div class="text-xl text-gray-400">HTML</div>
-                    <div class="text-4xl font-bold my-3">Programming</div>
-                    <div class=" text-2xl font-medium">Mr. Ihsan</div>
-                    <div class="my-14 ml-16 transform hover:-translate-y-1 hover:scale-110 transition-all delay-150 duration-300">
-                        <a href="{{ route('mainClass') }}" class="border rounded-full text-xl font-medium px-5 text-center bg-yellow-300 py-3 w-52 cursor-pointer hover:text-blue-500 transition duration-300">Open Class</a>
+            <div class="">
+                <div class="col-span-1 shadow-xl rounded-2xl w-10/12 mx-auto" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <div>
+                        <img class="rounded-t-xl w-full h-60" src="{{ asset('image/b.jpg') }}" alt="image">
+                    </div>
+                    <div class="mt-5 flex flex-col items-center h-52">
+                        <div>
+                            <div class="text-lg text-gray-400">PHP</div>
+                            <div class="text-4xl font-bold my-2">Programming</div>
+                            <div class=" text-xl font-medium">Mr. Ramadhan</div>
+                        </div>
+                        <div class="mt-8 transform hover:-translate-y-1 hover:scale-110 transition-all delay-150 duration-300">
+                            <a href="{{ route('mainClass') }}" class="rounded-full text-lg font-medium px-5 text-center bg-yellow-300 py-3 hover:text-blue-500 transition duration-300">Open Class</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-span-1 border rounded-xl shadow-xl w-96 mx-auto" data-aos="fade-up" data-aos-duration="900">
-                <img class="rounded-t-xl" src="{{ asset('image/d.jpeg') }}" alt="image">
-                <div class="mx-14 mb-12 mt-10">
-                    <div class="text-xl text-gray-400">Adobe Premiere Pro</div>
-                    <div class="text-4xl font-bold my-3">Video Editing</div>
-                    <div class=" text-2xl font-medium">Mr. Fitroh</div>
-                    <div class="my-14 ml-16 transform hover:-translate-y-1 hover:scale-110 transition-all delay-150 duration-300">
-                        <a href="{{ route('mainClass') }}" class="border rounded-full text-xl font-medium px-5 text-center bg-yellow-300 py-3 w-52 cursor-pointer hover:text-blue-500 transition duration-300">Open Class</a>
+            <div class="">
+                <div class="col-span-1 shadow-xl rounded-2xl w-10/12 mx-auto" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <div>
+                        <img class="rounded-t-xl w-full h-60" src="{{ asset('image/b.jpg') }}" alt="image">
+                    </div>
+                    <div class="mt-5 flex flex-col items-center h-52">
+                        <div>
+                            <div class="text-lg text-gray-400">PHP</div>
+                            <div class="text-4xl font-bold my-2">Programming</div>
+                            <div class=" text-xl font-medium">Mr. Ramadhan</div>
+                        </div>
+                        <div class="mt-8 transform hover:-translate-y-1 hover:scale-110 transition-all delay-150 duration-300">
+                            <a href="{{ route('mainClass') }}" class="rounded-full text-lg font-medium px-5 text-center bg-yellow-300 py-3 hover:text-blue-500 transition duration-300">Open Class</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="col-span-1 border rounded-xl shadow-xl w-96 mx-auto" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-span-1 border rounded-xl shadow-xl w-96 mx-auto" data-aos="fade-up" data-aos-duration="500">
                 <img class="rounded-t-xl" src="{{ asset('image/c.jpg') }}" alt="image">
                 <div class="mx-14 mb-12 mt-10">
                     <div class="text-xl text-gray-400">Blender</div>
@@ -100,7 +116,7 @@
                 </div>
             </div>
 
-            <div class="col-span-1 border rounded-xl shadow-xl w-96 mx-auto" data-aos="fade-up" data-aos-duration="900">
+            <div class="col-span-1 border rounded-xl shadow-xl w-96 mx-auto" data-aos="fade-up" data-aos-duration="500">
                 <img class="rounded-t-xl" src="{{ asset('image/d.jpeg') }}" alt="image">
                 <div class="mx-14 mb-12 mt-10">
                     <div class="text-xl text-gray-400">CSS</div>
@@ -118,7 +134,7 @@
             <div class="text-4xl font-bold">Teacher Populer</div>
         </div>
         <div class="grid grid-cols-3 text-blue-900 mb-40 mt-12 mx-auto">
-            <div class="col-span-1 border rounded-xl shadow-xl w-96 mx-auto" data-aos="fade-up" data-aos-duration="700">
+            <div class="col-span-1 border rounded-xl shadow-xl w-96 mx-auto" data-aos="fade-up" data-aos-duration="500">
                 <img class="rounded-t-xl" src="{{ asset('image/d.jpeg') }}" alt="image">
                 <div class="mx-14 my-12">
                     <div class="text-4xl font-bold">Mr. Ramadhan</div>

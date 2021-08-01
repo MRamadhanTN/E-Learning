@@ -1,18 +1,20 @@
 <?php
 
 use App\Http\Controllers\ClassController;
+use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Auth\LoginStudentController;
+use App\Http\Controllers\Auth\RegisterStudentController;
+use App\Http\Controllers\Auth\LoginTeacherController;
+use App\Http\Controllers\Auth\RegisterTeacherController;
 use App\Http\Controllers\LandingpageController;
-use App\Http\Controllers\LoginStudentController;
-use App\Http\Controllers\LoginTeacherController;
+use App\Http\Controllers\ProfileStudentController;
 use App\Http\Controllers\MainClassController;
 use App\Http\Controllers\MainProfileController;
 use App\Http\Controllers\MainSubjectController;
 use App\Http\Controllers\MainTheoryController;
-use App\Http\Controllers\ProfileStudentController;
-use App\Http\Controllers\RegisterStudentController;
-use App\Http\Controllers\RegisterTeacherController;
 use App\Http\Controllers\SubjectController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,4 +61,5 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
+Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
 
