@@ -3,7 +3,7 @@
         bg-gradient-to-b
         from-blue-500
         to-blue-800
-        md:relative md:h-screen
+        border-blue-900 border-r-4
         z-10
         lg:w-64
         md:w-48
@@ -25,13 +25,13 @@
         "
         >
         <li class="mx-auto my-5 cursor-pointer">
-            <a data-aos="fade up" data-aos-duration="500" data-aos-delay="100" href="#">
+            <a data-aos="fade up" data-aos-duration="500" data-aos-delay="100" href="{{ route('dashboard') }}">
                 <img src="{{ asset('image/logo.png') }}" alt="Logo" width="70" />
             </a>
         </li>
         <li class="flex-1">
             <a
-            href="#"
+            href="{{ route('dashboard') }}"
             class="
                 block
                 md:py-3
@@ -51,6 +51,7 @@
                 block
                 font-bold
                 md:inline-block
+                transition duration-500 transform hover:-translate-y-0 hover:scale-110
                 "
                 >Dashboard</span
             >
@@ -58,7 +59,7 @@
         </li>
         <li class="flex-1">
             <a
-            href="#"
+            href="{{ route('dashboardClass') }}"
             class="
                 block
                 md:py-3
@@ -75,7 +76,7 @@
                 pb-1
                 md:pb-0
                 text-xl
-
+                transition duration-500 transform hover:-translate-y-0 hover:scale-110
                 block
                 font-bold
                 md:inline-block
@@ -86,7 +87,7 @@
         </li>
         <li class="flex-1">
             <a
-            href="#"
+            href="{{ route('dashboardSubject') }}"
             class="
                 block
                 md:py-3
@@ -106,6 +107,7 @@
                 block
                 font-bold
                 md:inline-block
+                transition duration-500 transform hover:-translate-y-0 hover:scale-110
                 "
                 >Subject</span
             >
@@ -113,7 +115,7 @@
         </li>
         <li class="flex-1">
             <a
-            href="#"
+            href="{{ route('dashboardTheory') }}"
             class="
                 block
                 md:py-3
@@ -130,7 +132,7 @@
                 pb-1
                 md:pb-0
                 text-xl
-
+                transition duration-500 transform hover:-translate-y-0 hover:scale-110
                 block
                 font-bold
                 md:inline-block
@@ -141,7 +143,7 @@
         </li>
         <li class="flex-1">
             <a
-            href="#"
+            href="{{ route('dashboardVideo') }}"
             class="
                 block
                 md:py-3
@@ -158,7 +160,7 @@
                 pb-1
                 md:pb-0
                 text-xl
-
+                transition duration-500 transform hover:-translate-y-0 hover:scale-110
                 block
                 font-bold
                 md:inline-block
@@ -169,7 +171,7 @@
         </li>
         <li class="flex-1">
             <a
-            href="#"
+            href="{{ route('dashboardComment') }}"
             class="
                 block
                 md:py-3
@@ -186,7 +188,7 @@
                 pb-1
                 md:pb-0
                 text-xl
-
+                transition duration-500 transform hover:-translate-y-0 hover:scale-110
                 block
                 font-bold
                 md:inline-block
@@ -214,35 +216,7 @@
                 pb-1
                 md:pb-0
                 text-xl
-
-                block
-                font-bold
-                md:inline-block
-                "
-                >Profile</span
-            >
-            </a>
-        </li>
-        <li class="flex-1">
-            <a
-            href="#"
-            class="
-                block
-                md:py-3
-                align-middle
-                text-white
-                hover:bg-blue-800
-                hover:text-yellow-400
-                transition
-                duration-150
-                "
-                >
-                <span
-                class="
-                pb-1
-                md:pb-0
-                text-xl
-
+                transition duration-500 transform hover:-translate-y-0 hover:scale-110
                 block
                 font-bold
                 md:inline-block

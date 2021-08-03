@@ -4,20 +4,39 @@
 
 @section('content')
     <div class="main-content flex-1 bg-gray-200 md:pb-5">
-        <div class="bg-gray-800 ">
+        <div class="bg-blue-500 ">
           <div
             class="
-              bg-gradient-to-l
-              from-blue-500
-              to-blue-800
-              p-4
-              shadow
+              py-2 px-5
               text-2xl text-white
+              border-blue-900 border-b-4
+              flex justify-between items-center
             "
-          >
-            <h3 class="font-bold pl-2">Dashboard</h3>
+            >
+                <h3 class="font-medium pl-2">Dashboard</h3>
+                <div class="flex">
+                    <a href="{{ route('landingpage') }}" class="block md:inline-block text-white text-xl font-medium transition delay-150 duration-500 transform hover:-translate-y-1 hover:scale-110 hover:text-yellow-400 px-3 py-2">Home</a>
+                    <div x-data="{ dropdownOpen: false }" class="relative px-3">
+                        <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded-md focus:outline-none">
+                            <img class="rounded-full h-12 w-12" src="{{ asset('image/ui.png') }}" alt="image">
+                        </button>
 
-          </div>
+                        <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+                        <div x-show="dropdownOpen" class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-xl z-20 text-center">
+                            <a href="{{ route('profileStudent') }}" class="{{ (request()->is('MyProfile')) ? 'hidden':'block' }} px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                My Profile
+                            </a>
+                            <a href="{{ route('editProfileStudent') }}" class="{{ (request()->is('EditProfileStudent')) ? 'hidden':'block' }} px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                Settings
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                Sign Out
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="flex-initial flex flex-wrap justify-around mt-5">
@@ -119,7 +138,7 @@
 
         <div class="flex flex-row flex-wrap flex-grow">
 
-          <div class="w-8/12 bg-green-200 p-6">
+          <div class="w-8/12 py-6 pl-10 pr-4">
             <!--Graph Card-->
             <div class="bg-white border-transparent h-full rounded-lg shadow-xl">
               <div
@@ -134,33 +153,33 @@
                   p-2
                 "
               >
-                <h5 class="font-bold uppercase text-blue-900">visit your website</h5>
+                <h5 class="font-bold uppercase text-center text-3xl text-blue-900">Subject Favorite</h5>
               </div>
               <div class="p-5">
                 <canvas
                   id="chartjs-1"
                   class="chartjs"
                   width="undefined"
-                  height="undefined"
+                  height="300"
                 ></canvas>
                 <script>
                   new Chart(document.getElementById("chartjs-1"), {
                     type: "bar",
                     data: {
                       labels: [
-                        "January",
-                        "February",
-                        "March",
-                        "April",
-                        "May",
-                        "June",
-                        "July",
+                        "HTML",
+                        "CSS",
+                        "PHP",
+                        "FIGMA",
+                        "C++",
+                        "JS",
+                        "AI",
                       ],
                       datasets: [
                         {
                           label: "Likes",
-                          data: [65, 59, 80, 81, 56, 55, 40],
-                          fill: false,
+                          data: [50, 59, 80, 81, 56, 55, 40],
+                          fill: true,
                           backgroundColor: [
                             "rgba(255, 99, 132, 0.2)",
                             "rgba(255, 159, 64, 0.2)",
@@ -179,7 +198,7 @@
                             "rgb(153, 102, 255)",
                             "rgb(201, 203, 207)",
                           ],
-                          borderWidth: 1,
+                          borderWidth: 2,
                         },
                       ],
                     },

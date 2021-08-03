@@ -10,7 +10,7 @@
 
     @include('include.cdn')
   </head>
-  <body class="bg-blue-500 font-sans leading-normal tracking-normal">
+  <body class=" font-sans leading-normal tracking-normal">
     <div class="flex flex-col md:flex-row">
 
         @include('include.sidebar')

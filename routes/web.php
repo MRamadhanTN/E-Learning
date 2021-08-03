@@ -1,18 +1,26 @@
 <?php
 
-use App\Http\Controllers\ClassController;
-use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Auth\LoginStudentController;
 use App\Http\Controllers\Auth\RegisterStudentController;
 use App\Http\Controllers\Auth\LoginTeacherController;
 use App\Http\Controllers\Auth\RegisterTeacherController;
+
 use App\Http\Controllers\LandingpageController;
+
+use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\DashboardClassController;
+use App\Http\Controllers\Dashboard\DashboardCommentController;
+use App\Http\Controllers\Dashboard\DashboardSubjectController;
+use App\Http\Controllers\Dashboard\DashboardTheoryController;
+use App\Http\Controllers\Dashboard\DashboardVideoController;
+
 use App\Http\Controllers\ProfileStudentController;
+use App\Http\Controllers\ClassController;
 use App\Http\Controllers\MainClassController;
-use App\Http\Controllers\MainProfileController;
+use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\MainSubjectController;
 use App\Http\Controllers\MainTheoryController;
-use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\MainProfileController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -62,4 +70,16 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
+
+Route::get('/Dashboard/Class', [DashboardClassController::class,'index'])->name('dashboardClass');
+Route::get('/Dashboard/Class/Create', [DashboardClassController::class,'create'])->name('classCreate');
+
+Route::get('Dashboard/Subject', [DashboardSubjectController::class, 'index'])->name('dashboardSubject');
+Route::get('Dashboard/Subject/Create', [DashboardSubjectController::class, 'create'])->name('subjectCreate');
+
+Route::get('/Dashboard/Theory', [DashboardTheoryController::class, 'index'])->name('dashboardTheory');
+
+Route::get('/Dashboard/Video', [DashboardVideoController::class, 'index'])->name('dashboardVideo');
+
+Route::get('/Dashboard/Comment', [DashboardCommentController::class, 'index'])->name('dashboardComment');
 
