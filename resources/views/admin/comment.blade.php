@@ -42,7 +42,7 @@
 
         <div class="flex flex-1 px-7 justify-between mt-7">
             <div>
-                <a href="#" class="shadow-lg flex flex-1 items-center justify-center rounded-xl px-3 py-2 space-x-2 bg-red-500 text-white font-semibold hover:text-yellow-200 transition delay-150 duration-500 transform hover:-translate-y-0 hover:scale-105">
+                <a href="#" class="shadow-lg flex flex-1 items-center justify-center rounded-xl px-3 py-2 space-x-2 bg-red-500 text-white font-semibold transition delay-150 duration-500 transform hover:-translate-y-0 hover:scale-105">
                     <i class="far fa-trash-alt"></i>
                     <p>Delete All Selected</p>
                 </a>
@@ -78,8 +78,8 @@
                                 <p>03/08/2021</p>
                                 <p class="text-sm">20.00 AM</p>
                             </td>
-                            <td class="col-span-2 flex pl-2 justify-center font-medium">
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
+                            <td class="col-span-2 flex pl-2 justify-center font-medium text-white">
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
                             </td>
                         </tr>
                         <tr class="grid grid-cols-12 py-5 font-semibold items-start">
@@ -95,8 +95,8 @@
                                 <p>03/08/2021</p>
                                 <p class="text-sm">20.00 AM</p>
                             </td>
-                            <td class="col-span-2 flex pl-2 justify-center font-medium">
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
+                            <td class="col-span-2 flex pl-2 justify-center font-medium text-white">
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
                             </td>
                         </tr>
                         <tr class="grid grid-cols-12 py-5 font-semibold items-start">
@@ -112,8 +112,8 @@
                                 <p>03/08/2021</p>
                                 <p class="text-sm">20.00 AM</p>
                             </td>
-                            <td class="col-span-2 flex pl-2 justify-center font-medium">
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
+                            <td class="col-span-2 flex pl-2 justify-center font-medium text-white">
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
                             </td>
                         </tr>
                     </tbody>

@@ -24,7 +24,7 @@ class DashboardVideoController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.videoCreate');
     }
 
     /**
@@ -44,9 +44,9 @@ class DashboardVideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        return view('admin.videoDetail');
     }
 
     /**
@@ -55,9 +55,9 @@ class DashboardVideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('admin.videoEdit');
     }
 
     /**

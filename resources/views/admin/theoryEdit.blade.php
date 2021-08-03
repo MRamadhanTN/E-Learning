@@ -14,7 +14,7 @@
               flex justify-between items-center
             "
             >
-                <h3 class="font-medium pl-2">Theory / Create</h3>
+                <h3 class="font-medium pl-2">Theory / Edit</h3>
                 <div class="flex">
                         <a href="{{ route('landingpage') }}" class="block md:inline-block text-white text-xl font-medium transition duration-500 transform hover:-translate-y-1 hover:scale-105 hover:text-yellow-400 px-3 py-2">Home</a>
                         <div x-data="{ dropdownOpen: false }" class="relative px-3">
@@ -43,7 +43,7 @@
 
         <div class="mt-10 mb-5 flex justify-center items-center">
             <div class="bg-blue-500 px-10 py-6 rounded-2xl text-white text-center">
-                <h1 class="text-4xl font-bold mb-3">Create Theory</h1>
+                <h1 class="text-4xl font-bold mb-3">Edit Theory</h1>
                 <form action="#" method="post" class="flex flex-col items-start">
                     <label class="text-lg font-medium">Title</label>
                     <input type="text" class="shadow-lg text-blue-900 focus:outline-none rounded-xl w-96 bg-gray-100 px-4 py-2 mb-3" placeholder="enter title theory">
@@ -58,10 +58,10 @@
                     </select>
 
                     <label class="text-lg font-medium">Description</label>
-                    <textarea name="" id="" cols="34" rows="5" class="focus:outline-none bg-gray-100 rounded-xl px-4 py-2 text-blue-900"></textarea>
+                    <textarea name="" id="" cols="34" rows="5" class="focus:outline-none bg-gray-100 rounded-xl px-4 py-2 text-blue-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</textarea>
                 </form>
                 <div class="flex justify-end mt-5">
-                    <button class="rounded-full text-lg font-bold px-4 py-1 text-center bg-yellow-500 hover:bg-yellow-400 transition duration-300 tracking-wider">Create</button>
+                    <button class="rounded-full text-lg font-bold px-8 py-1 text-center bg-yellow-500 hover:bg-yellow-400 transition duration-300 tracking-wider">Save</button>
                 </div>
             </div>
         </div>

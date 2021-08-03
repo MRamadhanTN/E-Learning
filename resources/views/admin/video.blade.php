@@ -48,7 +48,7 @@
                 </a>
             </div>
             <div class="flex">
-                <a href="#" class="shadow-lg flex-1 flex items-center justify-center rounded-xl px-3 py-2 space-x-2 bg-red-500 text-white font-semibold hover:text-yellow-200 transition delay-150 duration-500 transform hover:-translate-y-0 hover:scale-105">
+                <a href="{{ route('videoCreate') }}" class="shadow-lg flex-1 flex items-center justify-center rounded-xl px-3 py-2 space-x-2 bg-red-500 text-white font-semibold hover:text-yellow-200 transition delay-150 duration-500 transform hover:-translate-y-0 hover:scale-105">
                     <i class="far fa-plus-square"></i>
                     <p>Create</p>
                 </a>
@@ -77,10 +77,10 @@
                             <td class="col-span-1">1</td>
                             <td class="col-span-2">Intro HTML</td>
                             <td class="col-span-2 text-center">100</td>
-                            <td class="col-span-3 flex pl-4 justify-center font-medium gap-x-3">
-                                <a href="#" class="bg-yellow-500 rounded-full px-4 py-1 transition duration-300 hover:text-yellow-200 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
-                                <a href="#" class="bg-blue-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex pl-4 justify-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('videoEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
+                                <a href="{{ route('videoDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
                             </td>
                         </tr>
 
@@ -91,10 +91,10 @@
                             <td class="col-span-1">2</td>
                             <td class="col-span-2">Intro Tag HTML</td>
                             <td class="col-span-2 text-center">100</td>
-                            <td class="col-span-3 flex pl-4 justify-center font-medium gap-x-3">
-                                <a href="#" class="bg-yellow-500 rounded-full px-4 py-1 transition duration-300 hover:text-yellow-200 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
-                                <a href="#" class="bg-blue-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex pl-4 justify-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('videoEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
+                                <a href="{{ route('videoDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
                             </td>
                         </tr>
 
@@ -105,10 +105,10 @@
                             <td class="col-span-1">3</td>
                             <td class="col-span-2">How to Tag link</td>
                             <td class="col-span-2 text-center">100</td>
-                            <td class="col-span-3 flex pl-4 justify-center font-medium gap-x-3">
-                                <a href="#" class="bg-yellow-500 rounded-full px-4 py-1 transition duration-300 hover:text-yellow-200 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
-                                <a href="#" class="bg-blue-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex pl-4 justify-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('videoEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
+                                <a href="{{ route('videoDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
                             </td>
                         </tr>
                     </tbody>

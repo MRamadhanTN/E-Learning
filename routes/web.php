@@ -73,13 +73,24 @@ Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard'
 
 Route::get('/Dashboard/Class', [DashboardClassController::class,'index'])->name('dashboardClass');
 Route::get('/Dashboard/Class/Create', [DashboardClassController::class,'create'])->name('classCreate');
+Route::get('/Dashboard/Class/Detail', [DashboardClassController::class,'show'])->name('classDetail');
+Route::get('/Dashboard/Class/Edit', [DashboardClassController::class,'edit'])->name('classEdit');
 
 Route::get('Dashboard/Subject', [DashboardSubjectController::class, 'index'])->name('dashboardSubject');
 Route::get('Dashboard/Subject/Create', [DashboardSubjectController::class, 'create'])->name('subjectCreate');
+Route::get('Dashboard/Subject/Detail', [DashboardSubjectController::class, 'show'])->name('subjectDetail');
+Route::get('Dashboard/Subject/Edit', [DashboardSubjectController::class, 'edit'])->name('subjectEdit');
 
 Route::get('/Dashboard/Theory', [DashboardTheoryController::class, 'index'])->name('dashboardTheory');
+Route::get('/Dashboard/Theory/Create', [DashboardTheoryController::class, 'create'])->name('theoryCreate');
+Route::get('/Dashboard/Theory/Detail', [DashboardTheoryController::class, 'show'])->name('theoryDetail');
+Route::get('/Dashboard/Theory/Edit', [DashboardTheoryController::class, 'edit'])->name('theoryEdit');
 
 Route::get('/Dashboard/Video', [DashboardVideoController::class, 'index'])->name('dashboardVideo');
+Route::get('/Dashboard/Video/Create', [DashboardVideoController::class, 'create'])->name('videoCreate');
+Route::get('/Dashboard/Video/Detail', [DashboardVideoController::class, 'show'])->name('videoDetail');
+Route::get('/Dashboard/Video/Edit', [DashboardVideoController::class, 'edit'])->name('videoEdit');
+
 
 Route::get('/Dashboard/Comment', [DashboardCommentController::class, 'index'])->name('dashboardComment');
 

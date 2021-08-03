@@ -79,10 +79,10 @@
                             <td class="col-span-3">Learning HTML Basic</td>
                             <td class="col-span-2">HTML</td>
                             <td class="col-span-2 text-center">100</td>
-                            <td class="col-span-3 flex items-center font-medium gap-x-3">
-                                <a href="#" class="bg-yellow-500 rounded-full px-4 py-1 transition duration-300 hover:text-yellow-200 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
-                                <a href="#" class="bg-blue-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex items-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('classEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
+                                <a href="{{ route('classDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
                             </td>
                         </tr>
                         <tr class="grid grid-cols-12 py-5 font-semibold">
@@ -93,10 +93,10 @@
                             <td class="col-span-3">Learning HTML Basic</td>
                             <td class="col-span-2">HTML</td>
                             <td class="col-span-2 text-center">100</td>
-                            <td class="col-span-3 flex items-center font-medium gap-x-3">
-                                <a href="#" class="bg-yellow-500 rounded-full px-4 py-1 transition duration-300 hover:text-yellow-200 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
-                                <a href="#" class="bg-blue-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex items-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('classEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
+                                <a href="{{ route('classDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
                             </td>
                         </tr>
                         <tr class="grid grid-cols-12 py-5 font-semibold">
@@ -107,10 +107,10 @@
                             <td class="col-span-3">Learning HTML Basic</td>
                             <td class="col-span-2">HTML</td>
                             <td class="col-span-2 text-center">100</td>
-                            <td class="col-span-3 flex items-center font-medium gap-x-3">
-                                <a href="#" class="bg-yellow-500 rounded-full px-4 py-1 transition duration-300 hover:text-yellow-200 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
-                                <a href="#" class="bg-blue-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex items-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('classEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
+                                <a href="{{ route('classDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
                             </td>
                         </tr>
                         <tr class="grid grid-cols-12 py-5 font-semibold">
@@ -121,10 +121,10 @@
                             <td class="col-span-3">Learning HTML Basic</td>
                             <td class="col-span-2">HTML</td>
                             <td class="col-span-2 text-center">100</td>
-                            <td class="col-span-3 flex items-center font-medium gap-x-3">
-                                <a href="#" class="bg-yellow-500 rounded-full px-4 py-1 transition duration-300 hover:text-yellow-200 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
-                                <a href="#" class="bg-blue-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex items-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('classEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
+                                <a href="{{ route('classDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
                             </td>
                         </tr>
                     </tbody>

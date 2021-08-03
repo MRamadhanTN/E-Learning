@@ -40,7 +40,7 @@
         </div>
 
         <div class="flex-initial flex flex-wrap justify-around mt-5">
-          <div class="md:w-1/2 xl:w-60 w-full p-6">
+          <a href="{{ route('dashboardClass') }}" class="md:w-1/2 xl:w-60 w-full p-6">
             <!--Metric Card-->
             <div
               class="
@@ -63,8 +63,8 @@
               </div>
             </div>
             <!--/Metric Card-->
-          </div>
-          <div class="md:w-1/2 xl:w-60 w-full p-6">
+          </a>
+          <a href="{{ route('dashboardSubject') }}" class="md:w-1/2 xl:w-60 w-full p-6">
             <!--Metric Card-->
             <div
               class="
@@ -87,8 +87,8 @@
               </div>
             </div>
             <!--/Metric Card-->
-          </div>
-          <div class="md:w-1/2 xl:w-60 w-full p-6">
+          </a>
+          <a href="{{ route('dashboardTheory') }}" class="md:w-1/2 xl:w-60 w-full p-6">
             <!--Metric Card-->
             <div
               class="
@@ -106,13 +106,13 @@
                   <h5 class="font-bold uppercase text-gray-600">
                     Total Theory
                   </h5>
-                  <h3 class="font-bold text-2xl">152 days</h3>
+                  <h3 class="font-bold text-2xl">152</h3>
                 </div>
               </div>
             </div>
             <!--/Metric Card-->
-          </div>
-          <div class="md:w-1/2 xl:w-60 w-full p-6">
+          </a>
+          <a href="{{ route('dashboardVideo') }}" class="md:w-1/2 xl:w-60 w-full p-6">
             <!--Metric Card-->
             <div
               class="
@@ -133,7 +133,7 @@
               </div>
             </div>
             <!--/Metric Card-->
-          </div>
+          </a>
         </div>
 
         <div class="flex flex-row flex-wrap flex-grow">
@@ -262,7 +262,7 @@
                   </tbody>
                 </table>
 
-                <p class="py-2 text-blue-400"><a href="#">See More -></a></p>
+                <p class="py-2 text-blue-400"><a href="{{ route('dashboardClass') }}">See More -></a></p>
               </div>
             </div>
             <!--/table Card-->
@@ -376,7 +376,7 @@
                     </tbody>
                   </table>
 
-                <p class="py-2 text-blue-400"><a href="#">See More -></a></p>
+                <p class="py-2 text-blue-400"><a href="{{ route('dashboardComment') }}">See More -></a></p>
 
                 </div>
               </div>

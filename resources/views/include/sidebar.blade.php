@@ -37,10 +37,11 @@
                 md:py-3
                 align-middle
                 text-white
-                hover:bg-blue-800
                 hover:text-yellow-400
                 transition
                 duration-150
+
+                {{ Request::url() == url('/dashboard') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -65,10 +66,11 @@
                 md:py-3
                 align-middle
                 text-white
-                hover:bg-blue-800
                 hover:text-yellow-400
                 transition
                 duration-150
+
+                {{ Request::is('Dashboard/Class*') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -93,10 +95,11 @@
                 md:py-3
                 align-middle
                 text-white
-                hover:bg-blue-800
                 hover:text-yellow-400
                 transition
                 duration-150
+
+                {{ Request::is('Dashboard/Subject*') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -121,10 +124,11 @@
                 md:py-3
                 align-middle
                 text-white
-                hover:bg-blue-800
                 hover:text-yellow-400
                 transition
                 duration-150
+
+                {{ Request::is('Dashboard/Theory*') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -149,10 +153,11 @@
                 md:py-3
                 align-middle
                 text-white
-                hover:bg-blue-800
                 hover:text-yellow-400
                 transition
                 duration-150
+
+                {{ Request::is('Dashboard/Video*') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -177,10 +182,11 @@
                 md:py-3
                 align-middle
                 text-white
-                hover:bg-blue-800
                 hover:text-yellow-400
                 transition
                 duration-150
+
+                {{ Request::is('Dashboard/Comment*') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -205,7 +211,6 @@
                 md:py-3
                 align-middle
                 text-white
-                hover:bg-blue-800
                 hover:text-yellow-400
                 transition
                 duration-150

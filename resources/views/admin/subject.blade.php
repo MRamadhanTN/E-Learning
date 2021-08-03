@@ -78,13 +78,13 @@
                             <td class="col-span-1">1</td>
                             <td class="col-span-2">HTML</td>
                             <td class="col-span-1">
-                                <img src="https://source.unsplash.com/50x50/?html" alt="image">
+                                <img class="w-12 h-12 rounded-xl shadow-lg" src="{{ asset('image/ui.png') }}" alt="image">
                             </td>
                             <td class="col-span-2 text-center">100</td>
-                            <td class="col-span-3 flex pl-5 justify-center font-medium gap-x-3">
-                                <a href="#" class="bg-yellow-500 rounded-full px-4 py-1 transition duration-300 hover:text-yellow-200 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
-                                <a href="#" class="bg-blue-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex pl-5 justify-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('subjectEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
+                                <a href="{{ route('subjectDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
                             </td>
                         </tr>
 
@@ -95,13 +95,13 @@
                             <td class="col-span-1">2</td>
                             <td class="col-span-2">PHP</td>
                             <td class="col-span-1">
-                                <img src="https://source.unsplash.com/50x50/?html" alt="image">
+                                <img class="w-12 h-12 rounded-xl shadow-lg" src="{{ asset('image/ui.png') }}" alt="image">
                             </td>
                             <td class="col-span-2 text-center">50</td>
-                            <td class="col-span-3 flex pl-5 justify-center font-medium gap-x-3">
-                                <a href="#" class="bg-yellow-500 rounded-full px-4 py-1 transition duration-300 hover:text-yellow-200 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
-                                <a href="#" class="bg-blue-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex pl-5 justify-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('subjectEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
+                                <a href="{{ route('subjectDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
                             </td>
                         </tr>
 
@@ -112,13 +112,13 @@
                             <td class="col-span-1">3</td>
                             <td class="col-span-2">CSS</td>
                             <td class="col-span-1">
-                                <img src="https://source.unsplash.com/50x50/?tecnology" alt="image">
+                                <img class="w-12 h-12 rounded-xl shadow-lg" src="{{ asset('image/ui.png') }}" alt="image">
                             </td>
                             <td class="col-span-2 text-center">100</td>
-                            <td class="col-span-3 flex pl-5 justify-center items-center font-medium gap-x-3">
-                                <a href="#" class="bg-yellow-500 rounded-full px-4 py-1 transition duration-300 hover:text-yellow-200 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Delete</a>
-                                <a href="#" class="bg-blue-500 rounded-full px-4 py-1 hover:text-yellow-200 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex pl-5 justify-center items-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('subjectEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
+                                <a href="{{ route('subjectDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
                             </td>
                         </tr>
                     </tbody>

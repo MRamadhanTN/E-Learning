@@ -49,13 +49,13 @@
                     <input type="text" class="shadow-lg text-blue-900 focus:outline-none rounded-xl w-96 bg-gray-100 px-4 py-2 mb-3" placeholder="enter name subject">
 
                     <label class="text-lg font-medium">Image</label>
-                    <input type="file" class="shadow-lg text-blue-900 focus:outline-none font-medium rounded-xl w-96 bg-gray-100 px-4 py-2 mb-3" placeholder="enter name class">
+                    <input type="file" class="shadow-lg text-blue-900 focus:outline-none font-medium rounded-xl w-96 bg-gray-100 px-4 py-2 mb-3">
 
                     <label class="text-lg font-medium">Description</label>
                     <textarea name="" id="" cols="34" rows="5" class="focus:outline-none bg-gray-100 rounded-xl px-4 py-2 text-blue-900"></textarea>
                 </form>
                 <div class="flex justify-end mt-5">
-                    <button class="rounded-full text-lg font-bold px-4 py-1 text-center bg-yellow-400 hover:text-blue-900 transition duration-300 tracking-wider">Create</button>
+                    <button class="rounded-full text-lg font-bold px-4 py-1 text-center bg-yellow-500 hover:bg-yellow-400 transition duration-300 tracking-wider">Create</button>
                 </div>
             </div>
         </div>
