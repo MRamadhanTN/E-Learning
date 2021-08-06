@@ -29,19 +29,16 @@
                 <img src="{{ asset('image/logo.png') }}" alt="Logo" width="70" />
             </a>
         </li>
-        <li class="flex-1">
+        <li class="flex-1 {{ Request::url() == url('/dashboard') ? ' bg-blue-800' : '' }}" >
             <a
             href="{{ route('dashboard') }}"
             class="
+
                 block
                 md:py-3
                 align-middle
                 text-white
                 hover:text-yellow-400
-                transition
-                duration-150
-
-                {{ Request::url() == url('/dashboard') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -58,7 +55,7 @@
             >
             </a>
         </li>
-        <li class="flex-1">
+        <li class="flex-1 {{ Request::is('Dashboard/Class*') ? ' bg-blue-800' : '' }}">
             <a
             href="{{ route('dashboardClass') }}"
             class="
@@ -67,10 +64,6 @@
                 align-middle
                 text-white
                 hover:text-yellow-400
-                transition
-                duration-150
-
-                {{ Request::is('Dashboard/Class*') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -87,7 +80,7 @@
             >
             </a>
         </li>
-        <li class="flex-1">
+        <li class="flex-1 {{ Request::is('Dashboard/Subject*') ? ' bg-blue-800' : '' }}">
             <a
             href="{{ route('dashboardSubject') }}"
             class="
@@ -96,10 +89,6 @@
                 align-middle
                 text-white
                 hover:text-yellow-400
-                transition
-                duration-150
-
-                {{ Request::is('Dashboard/Subject*') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -116,7 +105,7 @@
             >
             </a>
         </li>
-        <li class="flex-1">
+        <li class="flex-1 {{ Request::is('Dashboard/Theory*') ? ' bg-blue-800' : '' }}">
             <a
             href="{{ route('dashboardTheory') }}"
             class="
@@ -125,10 +114,6 @@
                 align-middle
                 text-white
                 hover:text-yellow-400
-                transition
-                duration-150
-
-                {{ Request::is('Dashboard/Theory*') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -145,7 +130,7 @@
             >
             </a>
         </li>
-        <li class="flex-1">
+        <li class="flex-1 {{ Request::is('Dashboard/Video*') ? ' bg-blue-800' : '' }}">
             <a
             href="{{ route('dashboardVideo') }}"
             class="
@@ -154,10 +139,6 @@
                 align-middle
                 text-white
                 hover:text-yellow-400
-                transition
-                duration-150
-
-                {{ Request::is('Dashboard/Video*') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -174,7 +155,7 @@
             >
             </a>
         </li>
-        <li class="flex-1">
+        <li class="flex-1 {{ Request::is('Dashboard/Comment*') ? ' bg-blue-800' : '' }}">
             <a
             href="{{ route('dashboardComment') }}"
             class="
@@ -183,10 +164,6 @@
                 align-middle
                 text-white
                 hover:text-yellow-400
-                transition
-                duration-150
-
-                {{ Request::is('Dashboard/Comment*') ? ' bg-blue-800' : '' }}
                 "
                 >
                 <span
@@ -203,7 +180,7 @@
             >
             </a>
         </li>
-        <li class="flex-1">
+        <li class="flex-1 {{ Request::is('Dashboard/Logout*') ? ' bg-blue-800' : '' }}">
             <a
             href="#"
             class="
@@ -212,8 +189,6 @@
                 align-middle
                 text-white
                 hover:text-yellow-400
-                transition
-                duration-150
                 "
                 >
                 <span

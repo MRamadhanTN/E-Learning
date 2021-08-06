@@ -14,8 +14,8 @@
               flex justify-between items-center
             "
             >
-                <h3 class="font-medium pl-2" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">Video / Edit</h3>
-                <div class="flex " data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                <h3 class="font-medium pl-2" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100"><a href="{{ route('Admin') }}">Profile</a></h3>
+                <div class="flex z-10" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
                         <a href="{{ route('landingpage') }}" class="block md:inline-block text-white text-xl font-medium transition duration-500 transform hover:-translate-y-0 hover:scale-110 hover:text-yellow-400 px-3 py-2">Home</a>
                         <div x-data="{ dropdownOpen: false }" class="relative px-3" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
                             <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded-md focus:outline-none">
@@ -25,9 +25,6 @@
                             <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
 
                             <div x-show="dropdownOpen" class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-xl z-20 text-center">
-                                <a href="{{ route('Admin') }}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-                                    My Profile
-                                </a>
                                 <a href="{{ route('AdminEdit') }}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                                     Settings
                                 </a>
@@ -41,25 +38,17 @@
         </div>
 
 
-        <div class="mt-16 mb-5 flex justify-center items-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
-            <div class="bg-blue-500 shadow-lg px-10 py-6 rounded-2xl text-white text-center">
-                <h1 class="text-4xl font-bold mb-3">Edit Video</h1>
-                <form action="#" method="post" class="flex flex-col items-start">
-                    <label class="text-lg font-medium">Title</label>
-                    <input type="text" class="shadow-lg text-blue-900 focus:outline-none rounded-xl w-96 bg-gray-100 px-4 py-2 mb-3" placeholder="enter title video" value="HTML 1">
-
-                    <label class="text-lg font-medium">Theory</label>
-                    <select name="skill" id="skill" class="focus:outline-none shadow-lg rounded-xl w-96 text-blue-900 font-medium bg-gray-100 px-4 py-2 mb-3">
-                        <option class="font-medium" value="#">Learning Programming</option>
-                        <option class="font-medium" value="#">Learning Design Basic</option>
-                    </select>
-
-                    <label class="text-lg font-medium">Video</label>
-                    <input type="file" class="shadow-lg text-blue-900 focus:outline-none rounded-xl w-96 bg-gray-100 px-4 py-2 mb-3 font-medium" placeholder="enter name class">
-
-                </form>
+        <div class="mt-10 mb-5 flex justify-center items-center" data-aos="zoom-in" data-aos-duration="500">
+            <div class="bg-blue-500 shadow-lg px-10 py-6 rounded-2xl text-white text-center space-y-6">
+                <h1 class="text-4xl font-bold mb-3">My Profile</h1>
+                <img class="w-32 h-32 mx-auto rounded-full" src="{{ asset('image/ui.png') }}" alt="image">
+                <div class="flex-1 font-medium space-y-2">
+                    <h1 class="text-2xl font-bold">Muhamad Ramadhan Tri Nurdias</h1>
+                    <h2 class="text-xl">FrontEndDeveloper</h2>
+                    <h4 class="text-md text-blue-200">Nurdias45@gmail.com</h4>
+                </div>
                 <div class="flex justify-end mt-5">
-                    <button type="submit" class="rounded-full text-lg font-bold px-8 py-1 text-center bg-yellow-500 hover:bg-yellow-400 transition duration-500 transform hover:-translate-y-0 hover:scale-110 tracking-wider shadow-lg">Save</button>
+                    <a href="{{ route('AdminEdit') }}" class="rounded-full text-lg font-bold px-8 py-1 text-center bg-yellow-500 hover:bg-yellow-400 tracking-wider transition duration-300 shadow-md delay-150 transform hover:-translate-y-0 hover:scale-110">Edit</a>
                 </div>
             </div>
         </div>

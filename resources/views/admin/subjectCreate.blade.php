@@ -14,10 +14,10 @@
               flex justify-between items-center
             "
             >
-                <h3 class="font-medium pl-2">Subject / Create</h3>
-                <div class="flex">
-                        <a href="{{ route('landingpage') }}" class="block md:inline-block text-white text-xl font-medium transition duration-500 transform hover:-translate-y-1 hover:scale-105 hover:text-yellow-400 px-3 py-2">Home</a>
-                        <div x-data="{ dropdownOpen: false }" class="relative px-3">
+                <h3 class="font-medium pl-2" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100"><a href="{{ route('dashboardSubject') }}">Subject</a> / <a href="{{ route('subjectCreate') }}">Create</a></h3>
+                <div class="flex z-10" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                        <a href="{{ route('landingpage') }}" class="block md:inline-block text-white text-xl font-medium transition duration-500 transform hover:-translate-y-0 hover:scale-110 hover:text-yellow-400 px-3 py-2">Home</a>
+                        <div x-data="{ dropdownOpen: false }" class="relative px-3" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
                             <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded-md focus:outline-none">
                                 <img class="rounded-full h-12 w-12" src="{{ asset('image/ui.png') }}" alt="image">
                             </button>
@@ -25,10 +25,10 @@
                             <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
 
                             <div x-show="dropdownOpen" class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-xl z-20 text-center">
-                                <a href="{{ route('profileStudent') }}" class="{{ (request()->is('MyProfile')) ? 'hidden':'block' }} px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                <a href="{{ route('Admin') }}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                                     My Profile
                                 </a>
-                                <a href="{{ route('editProfileStudent') }}" class="{{ (request()->is('EditProfileStudent')) ? 'hidden':'block' }} px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                <a href="{{ route('AdminEdit') }}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                                     Settings
                                 </a>
                                 <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
@@ -41,8 +41,8 @@
         </div>
 
 
-        <div class="mt-10 mb-5 flex justify-center items-center">
-            <div class="bg-blue-500 px-10 py-6 rounded-2xl text-white text-center">
+        <div class="mt-10 mb-5 flex justify-center items-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
+            <div class="bg-blue-500 shadow-lg px-10 py-6 rounded-2xl text-white text-center">
                 <h1 class="text-4xl font-bold mb-3">Create Subject</h1>
                 <form action="#" method="post" class="flex flex-col items-start">
                     <label class="text-lg font-medium">Name</label>
@@ -52,10 +52,10 @@
                     <input type="file" class="shadow-lg text-blue-900 focus:outline-none font-medium rounded-xl w-96 bg-gray-100 px-4 py-2 mb-3">
 
                     <label class="text-lg font-medium">Description</label>
-                    <textarea name="" id="" cols="34" rows="5" class="focus:outline-none bg-gray-100 rounded-xl px-4 py-2 text-blue-900"></textarea>
+                    <textarea name="" id="" cols="34" rows="5" class="focus:outline-none bg-gray-100 rounded-xl px-4 py-2 text-blue-900 shadow-lg"></textarea>
                 </form>
                 <div class="flex justify-end mt-5">
-                    <button class="rounded-full text-lg font-bold px-4 py-1 text-center bg-yellow-500 hover:bg-yellow-400 transition duration-300 tracking-wider">Create</button>
+                    <button type="submit" class="rounded-full text-lg font-bold px-5 py-1 text-center bg-yellow-500 hover:bg-yellow-400 transition duration-500 transform hover:-translate-y-0 hover:scale-110 tracking-wider shadow-lg">Create</button>
                 </div>
             </div>
         </div>

@@ -12,3 +12,4 @@ class LoginTeacherController extends Controller
         return view('auth.loginTeacher');
     }
 }
+

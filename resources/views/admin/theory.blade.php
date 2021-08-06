@@ -14,10 +14,10 @@
               flex justify-between items-center
             "
             >
-                <h3 class="font-medium pl-2">Theory</h3>
-                <div class="flex">
-                        <a href="{{ route('landingpage') }}" class="block md:inline-block text-white text-xl font-medium transition duration-500 transform hover:-translate-y-1 hover:scale-105 hover:text-yellow-400 px-3 py-2">Home</a>
-                        <div x-data="{ dropdownOpen: false }" class="relative px-3">
+                <h3 class="font-medium pl-2" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100"><a href="{{ route('dashboardTheory') }}">Theory</a></h3>
+                <div class="flex z-10" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                        <a href="{{ route('landingpage') }}" class="block md:inline-block text-white text-xl font-medium transition duration-500 transform hover:-translate-y-0 hover:scale-110 hover:text-yellow-400 px-3 py-2">Home</a>
+                        <div x-data="{ dropdownOpen: false }" class="relative px-3" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
                             <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded-md focus:outline-none">
                                 <img class="rounded-full h-12 w-12" src="{{ asset('image/ui.png') }}" alt="image">
                             </button>
@@ -25,10 +25,10 @@
                             <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
 
                             <div x-show="dropdownOpen" class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-xl z-20 text-center">
-                                <a href="{{ route('profileStudent') }}" class="{{ (request()->is('MyProfile')) ? 'hidden':'block' }} px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                <a href="{{ route('Admin') }}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                                     My Profile
                                 </a>
-                                <a href="{{ route('editProfileStudent') }}" class="{{ (request()->is('EditProfileStudent')) ? 'hidden':'block' }} px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                                <a href="{{ route('AdminEdit') }}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                                     Settings
                                 </a>
                                 <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
@@ -40,15 +40,9 @@
             </div>
         </div>
 
-        <div class="flex flex-1 px-7 justify-between mt-7">
-            <div>
-                <a href="#" class="shadow-lg flex flex-1 items-center justify-center rounded-xl px-3 py-2 space-x-2 bg-red-500 text-white font-semibold hover:text-yellow-200 transition delay-150 duration-500 transform hover:-translate-y-0 hover:scale-105">
-                    <i class="far fa-trash-alt"></i>
-                    <p>Delete All Selected</p>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="{{ route('theoryCreate') }}" class="shadow-lg flex-1 flex items-center justify-center rounded-xl px-3 py-2 space-x-2 bg-red-500 text-white font-semibold hover:text-yellow-200 transition delay-150 duration-500 transform hover:-translate-y-0 hover:scale-105">
+        <div class="flex flex-1 px-7 justify-end mt-7">
+            <div class="flex" data-aos="fade-right" data-aos-duration="800" data-aos-delay="800">
+                <a href="{{ route('theoryCreate') }}" class="shadow-lg flex-1 flex items-center justify-center rounded-full px-5 py-2 space-x-2 bg-red-500 text-white font-semibold hover:bg-red-400 transition delay-150 duration-500 transform hover:-translate-y-0 hover:scale-105">
                     <i class="far fa-plus-square"></i>
                     <p>Create</p>
                 </a>
@@ -57,13 +51,10 @@
 
 
             <div class="px-7 mt-7">
-                <table class="table-auto text-left bg-blue-500 rounded-xl w-full display text-blue-900 shadow-xl" id="table_id">
+                <table class="table-auto text-left bg-blue-500 rounded-xl w-full display text-blue-900 shadow-xl" id="table_id" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
                     <thead>
-                        <tr class="grid grid-cols-10 py-2">
-                            <th class="col-span-1 flex justify-center items-center">
-                                <input class="checked:bg-blue-600 checked:border-transparent h-4 w-4" type="checkbox">
-                            </th>
-                            <th class="col-span-1">NO</th>
+                        <tr class="grid grid-cols-9 py-2">
+                            <th class="col-span-1 text-center">NO</th>
                             <th class="col-span-2">TITLE</th>
                             <th class="col-span-1">IMAGE</th>
                             <th class="col-span-2 text-center">VIEW</th>
@@ -71,54 +62,45 @@
                         </tr>
                     </thead>
                     <tbody class="bg-blue-200">
-                        <tr class="grid grid-cols-10 py-5 font-semibold items-center">
-                            <th class="col-span-1 flex justify-center pt-1">
-                                <input class="checked:bg-blue-600 checked:border-transparent h-4 w-4" type="checkbox">
-                            </th>
-                            <td class="col-span-1">1</td>
+                        <tr class="grid grid-cols-9 py-5 font-semibold items-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
+                            <td class="col-span-1 text-center">1</td>
                             <td class="col-span-2">Intro HTML</td>
                             <td class="col-span-1">
                                 <img class="w-12 h-12 rounded-xl shadow-lg" src="{{ asset('image/ui.png') }}" alt="image">
                             </td>
                             <td class="col-span-2 text-center">100</td>
                             <td class="col-span-3 flex pl-5 justify-center font-medium gap-x-3 text-white">
-                                <a href="{{ route('theoryEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
-                                <a href="{{ route('theoryDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
+                                <a href="{{ route('theoryEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg delay-150 transform hover:-translate-y-0 hover:scale-110">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg delay-150 transform hover:-translate-y-0 hover:scale-110">Delete</a>
+                                <a href="{{ route('theoryDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg delay-150 transform hover:-translate-y-0 hover:scale-110">Detail</a>
                             </td>
                         </tr>
 
-                        <tr class="grid grid-cols-10 py-5 font-semibold items-center">
-                            <th class="col-span-1 flex justify-center pt-1">
-                                <input class="checked:bg-blue-600 checked:border-transparent h-4 w-4" type="checkbox">
-                            </th>
-                            <td class="col-span-1">2</td>
-                            <td class="col-span-2">Tools HTML</td>
-                            <td class="col-span-1">
-                                <img class="w-12 h-12 rounded-xl shadow-lg" src="{{ asset('image/ui.png') }}" alt="image">
-                            </td>
-                            <td class="col-span-2 text-center">50</td>
-                            <td class="col-span-3 flex pl-5 justify-center font-medium gap-x-3 text-white">
-                                <a href="{{ route('theoryEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
-                                <a href="{{ route('theoryDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
-                            </td>
-                        </tr>
-
-                        <tr class="grid grid-cols-10 py-5 font-semibold items-center">
-                            <th class="col-span-1 flex justify-center pt-1">
-                                <input class="checked:bg-blue-600 checked:border-transparent h-4 w-4" type="checkbox">
-                            </th>
-                            <td class="col-span-1">3</td>
-                            <td class="col-span-2">CSS</td>
+                        <tr class="grid grid-cols-9 py-5 font-semibold items-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
+                            <td class="col-span-1 text-center">2</td>
+                            <td class="col-span-2">Intro HTML</td>
                             <td class="col-span-1">
                                 <img class="w-12 h-12 rounded-xl shadow-lg" src="{{ asset('image/ui.png') }}" alt="image">
                             </td>
                             <td class="col-span-2 text-center">100</td>
-                            <td class="col-span-3 flex pl-5 justify-center items-center font-medium gap-x-3 text-white">
-                                <a href="{{ route('theoryEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Edit</a>
-                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Delete</a>
-                                <a href="{{ route('theoryDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg">Detail</a>
+                            <td class="col-span-3 flex pl-5 justify-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('theoryEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg delay-150 transform hover:-translate-y-0 hover:scale-110">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg delay-150 transform hover:-translate-y-0 hover:scale-110">Delete</a>
+                                <a href="{{ route('theoryDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg delay-150 transform hover:-translate-y-0 hover:scale-110">Detail</a>
+                            </td>
+                        </tr>
+
+                        <tr class="grid grid-cols-9 py-5 font-semibold items-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="900">
+                            <td class="col-span-1 text-center">3</td>
+                            <td class="col-span-2">Intro HTML</td>
+                            <td class="col-span-1">
+                                <img class="w-12 h-12 rounded-xl shadow-lg" src="{{ asset('image/ui.png') }}" alt="image">
+                            </td>
+                            <td class="col-span-2 text-center">100</td>
+                            <td class="col-span-3 flex pl-5 justify-center font-medium gap-x-3 text-white">
+                                <a href="{{ route('theoryEdit') }}" class="bg-yellow-500 hover:bg-yellow-400 rounded-full px-4 py-1 transition duration-300 shadow-lg delay-150 transform hover:-translate-y-0 hover:scale-110">Edit</a>
+                                <a href="#" class="bg-red-500 hover:bg-red-400 rounded-full px-4 py-1 transition duration-300 shadow-lg delay-150 transform hover:-translate-y-0 hover:scale-110">Delete</a>
+                                <a href="{{ route('theoryDetail') }}" class="bg-blue-500 hover:bg-blue-400 rounded-full px-4 py-1 transition duration-300 shadow-lg delay-150 transform hover:-translate-y-0 hover:scale-110">Detail</a>
                             </td>
                         </tr>
                     </tbody>

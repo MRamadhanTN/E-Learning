@@ -16,6 +16,7 @@ use App\Http\Controllers\Dashboard\DashboardVideoController;
 
 use App\Http\Controllers\ProfileStudentController;
 use App\Http\Controllers\ClassController;
+use App\Http\Controllers\Dashboard\DashboardUserAdmin;
 use App\Http\Controllers\MainClassController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\MainSubjectController;
@@ -70,6 +71,9 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
+
+Route::get('/Dashboard/Admin', [DashboardUserAdmin::class, 'index'])->name('Admin');
+Route::get('/Dashboard/Admin/Edit', [DashboardUserAdmin::class, 'edit'])->name('AdminEdit');
 
 Route::get('/Dashboard/Class', [DashboardClassController::class,'index'])->name('dashboardClass');
 Route::get('/Dashboard/Class/Create', [DashboardClassController::class,'create'])->name('classCreate');
