@@ -197,7 +197,7 @@
                 <div class="text-4xl font-bold w-96 mx-auto">Ready to create a beautiful future now?</div>
                 <div class="text-2xl max-w-md mx-auto">Learn directly from experienced teachers in his field indefinitely</div>
             </div>
-            <a href="{{ route('reStudent') }}" class="transition  mx-auto duration-500 transform hover:-translate-y-1 hover:scale-110 text-2xl text-blue-900 hover:text-blue-500 font-medium rounded-full text-center bg-yellow-300 py-3 w-52" >Sign Up Free</a>
+            <a href="{{ route('register') }}" class="transition  mx-auto duration-500 transform hover:-translate-y-1 hover:scale-110 text-2xl text-blue-900 hover:text-blue-500 font-medium rounded-full text-center bg-yellow-300 py-3 w-52" >Sign Up Free</a>
         </div>
 
         {{-- Footer --}}
@@ -219,3 +219,28 @@
         }).mount();
     </script>
 @endsection
+
+
+{{-- @extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection --}}

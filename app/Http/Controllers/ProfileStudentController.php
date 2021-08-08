@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileStudentController extends Controller
 {
@@ -11,9 +13,10 @@ class ProfileStudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        return view('pages.profileStudent');
+        $user = User::find($id);
+        return view('pages.profileStudent', compact('user'));
     }
 
     /**
@@ -56,7 +59,9 @@ class ProfileStudentController extends Controller
      */
     public function edit($id)
     {
-        //
+        // $id = Auth::user()->id;
+        $user = User::find($id);
+        return view('pages.editProfileStudent', compact('user'));
     }
 
     /**
@@ -68,7 +73,10 @@ class ProfileStudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        User::find($id)->update($request->all());
+
+        return redirect('MyProfile'.'/'. $id);
     }
 
     /**

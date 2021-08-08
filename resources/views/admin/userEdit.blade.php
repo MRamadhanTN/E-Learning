@@ -16,7 +16,7 @@
             >
                 <h3 class="font-medium pl-2" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100"><a href="{{ route('Admin') }}">Profile</a> / <a href="{{ route('AdminEdit') }}">Edit</a></h3>
                 <div class="flex z-10" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
-                        <a href="{{ route('landingpage') }}" class="block md:inline-block text-white text-xl font-medium transition duration-500 transform hover:-translate-y-0 hover:scale-110 hover:text-yellow-400 px-3 py-2">Home</a>
+                        <a href="{{ route('home') }}" class="block md:inline-block text-white text-xl font-medium transition duration-500 transform hover:-translate-y-0 hover:scale-110 hover:text-yellow-400 px-3 py-2">Home</a>
                         <div x-data="{ dropdownOpen: false }" class="relative px-3" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
                             <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded-md focus:outline-none">
                                 <img class="rounded-full h-12 w-12" src="{{ asset('image/ui.png') }}" alt="image">
@@ -24,14 +24,18 @@
 
                             <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
 
-                            <div x-show="dropdownOpen" class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-xl z-20 text-center">
+                            <div x-show="dropdownOpen" class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-xl z-20 text-center font-medium">
                                 <a href="{{ route('Admin') }}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                                     My Profile
                                 </a>
-                                <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-                                    Sign Out
-                                </a>
-                            </div>
+                                <form class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white" action="{{ route('logout') }}" method="post">
+                                @csrf
+                                @method('POST')
+                                    <button class="font-medium" type="submit">
+                                        Sign Out
+                                    </button>
+                                </form>
+                                </div>
                         </div>
                     </div>
             </div>
@@ -47,6 +51,9 @@
 
                     <label class="text-lg font-medium">Email</label>
                     <input type="email" class="text-center shadow-lg text-blue-900 focus:outline-none rounded-xl w-96 bg-gray-100 px-4 py-2 mb-3" value="Nurdias45@gmail.com" placeholder="example@email.com">
+
+                    <label class="text-lg font-medium">Image</label>
+                    <input type="text" class="text-center shadow-lg text-blue-900 focus:outline-none rounded-xl w-96 bg-gray-100 px-4 py-2 mb-3" placeholder="link" value="http://127.0.0.1:8000/EditProfileStudent#">
 
                     <label class="text-lg font-medium">Password</label>
                     <input type="password" class="text-center shadow-lg text-blue-900 focus:outline-none rounded-xl w-96 bg-gray-100 px-4 py-2 mb-3" value="*********" placeholder="enter your password">

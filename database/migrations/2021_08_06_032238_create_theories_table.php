@@ -17,6 +17,7 @@ class CreateTheoriesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('image');
+            $table->text('description');
             $table->foreignId('class_id');
             $table->timestamps();
         });

@@ -1,11 +1,6 @@
 <?php
 
-use App\Http\Controllers\Auth\LoginStudentController;
-use App\Http\Controllers\Auth\RegisterStudentController;
-use App\Http\Controllers\Auth\LoginTeacherController;
 use App\Http\Controllers\Auth\RegisterTeacherController;
-
-use App\Http\Controllers\LandingpageController;
 
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\DashboardClassController;
@@ -35,7 +30,8 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [LandingpageController::class, 'index'])->name('landingpage');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/Class', [ClassController::class, 'index'])->name('class');
 Route::get('/ClassMain', [MainClassController::class, 'index'])->name('mainClass');
@@ -47,18 +43,12 @@ Route::get('/TheoryMain', [MainTheoryController::class, 'index'])->name('mainThe
 
 Route::get('/ProfileTeacher', [MainProfileController::class, 'index'])->name('profile');
 
-Route::get('/LoginStudent', [LoginStudentController::class, 'index'])->name('student');
-Route::get('/RegisterStudent', [RegisterStudentController::class, 'index'])->name('reStudent');
+Route::get('/MyProfile/{id}', [ProfileStudentController::class, 'index'])->name('profileStudent');
+Route::get('/Profile/edit/{id}', [ProfileStudentController::class, 'edit'])->name('editProfileStudent');
+Route::put('/Profile/{id}/update', [ProfileStudentController::class, 'update'])->name('updateProfileStudent');
 
-Route::get('/MyProfile', [ProfileStudentController::class, 'index'])->name('profileStudent');
-
-Route::get('/EditProfileStudent', function () {
-    return view('pages.editProfileStudent');
-})->name('editProfileStudent');
-
-Route::get('/LoginTeacher', [LoginTeacherController::class, 'index'])->name('Teacher');
-Route::get('/RegisterTeacher', [RegisterTeacherController::class, 'index'])->name('reTeacher');
-
+Route::get('/RegisterTeacher', [RegisterTeacherController::class, 'create'])->name('reTeacher');
+Route::post('/RegisterTeacher/store', [RegisterTeacherController::class, 'store'])->name('reTeacher.store');
 
 Route::get('/private&policy', function () {
     return view('pages.private');
@@ -97,4 +87,7 @@ Route::get('/Dashboard/Video/Edit', [DashboardVideoController::class, 'edit'])->
 
 
 Route::get('/Dashboard/Comment', [DashboardCommentController::class, 'index'])->name('dashboardComment');
+
+
+Auth::routes();
 
