@@ -47,10 +47,6 @@ class RegisterTeacherController extends Controller
 
         $data['password'] = Hash::make($request->password);
 
-        if (Hash::check($data, $request->password)) {
-
-        };
-
         User::create($data);
         return redirect()->route('login')->with('Login Success', 'Data berhasil dibuat');
     }
